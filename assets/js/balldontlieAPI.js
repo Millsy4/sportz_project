@@ -23,7 +23,7 @@ function getPlayerByName() {
 
       console.log(response);
 
-      var playerAverageContent = `<h1 class="player-averages-text text-center">Averages</h1>
+      var playerAverageContent = `<h1 class="player-averages-text text-center">Season Averages</h1>
       <before::>
       <table class="player-averages">
         <tr>
