@@ -6,7 +6,7 @@ function getPlayerByName() {
 
     var value = $("#search-input").val();
 
-    var queryURL = 'https://www.balldontlie.io/api/v1/players/?search=' + value;
+	var queryURL = 'https://www.balldontlie.io/api/v1/players/?search=' + value;
     
     $(".form-errors").text("Please enter an ID of the player or team you want to search for!").hide();
 
@@ -19,38 +19,37 @@ function getPlayerByName() {
 	},
 	
     }).then(function(response) {
-        console.log(response)
-    	})
-    })
-}
+		console.log(response)
+		
+		var playerID = response.data[0].id;
 
-function getPlayerStats() {
+		console.log(playerID);
 
-    $("#search-button").on("click", function() {
+		var seasons = 2019;
+		
+		var queryURL = 'https://www.balldontlie.io/api/v1/stats/?seasons[]=' + seasons + '&per_page=10' + '&player_ids[]=' + playerID;
 
-    var value = $("#search-input").val();
+		console.log(queryURL);
+		
+		$(".form-errors").text("Please enter an ID of the player or team you want to search for!").hide();
 
-    var queryURL = 'https://www.balldontlie.io/api/v1/stats/?search=' + value;
-    
-    $(".form-errors").text("Please enter an ID of the player or team you want to search for!").hide();
-
-    $.ajax({
-    url: queryURL,
-    method: 'GET',
-    error: (err) => {
-        $(".form-errors").text("Please enter an ID of the player or team you want to search for!").show();
-        return;
-	},
-	
-    }).then(function(response) {
-        console.log(response)
-    	})
+		$.ajax({
+		url: queryURL,
+		method: 'GET',
+		error: (err) => {
+			$(".form-errors").text("Please enter an ID of the player or team you want to search for!").show();
+			return;
+		},
+		
+		}).then(function(response) {
+			console.log(response);
+			})
+		})
     })
 }
 
 $(document).ready(function() {
 	getPlayerByName();
-	getPlayerStats();
 });
 
 
