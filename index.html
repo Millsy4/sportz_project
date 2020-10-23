@@ -21,7 +21,7 @@
       rel="stylesheet"
     />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/balldontlieAPI.js"></script>
+    <script src="assets/js/balldontlieAPI.js"></script>
     <script src="./assets/js/script.js"></script>
     <title>Sportz Project</title>
   </head>
@@ -41,14 +41,19 @@
           id="search-input"
         />
         <div class="input-group-button">
-          <input id="search-button" type="submit" class="button" value="Search" />
+          <input type="submit" class="button" value="Search" id="search-button"/>
         </div>
       </div>
 
       <hr />
       <div class="card">
         <h1 class="statistics-header text-center">Statistics Report:</h1>
-        <div class="statistics-report">Hello: </div>
+        <div class="statistics-report"></div>
+          <div class="statistics-stats">
+            <div class="player-data"></div>
+          </div>
+
+          <div id="player-averages"></div>
       </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
