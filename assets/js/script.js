@@ -4,6 +4,7 @@
 
 // As an example your new URL will be:
 
+
 // https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?t=Arsenal  
 
 var playerNames = "Lebron James"
@@ -16,3 +17,4 @@ $.ajax({
 }).then(function(response) {
     console.log(response);
 })
+
