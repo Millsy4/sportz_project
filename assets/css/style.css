@@ -130,5 +130,13 @@ input {
 }
 
 body {
-  background-color: #41474d;
+  background-color: #cecece;
+}
+
+.form-errors {
+  color: #cc0000;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 15px;
+  margin: 5px 0 0;
 }

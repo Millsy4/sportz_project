@@ -17,6 +17,7 @@
       crossorigin="anonymous"
     />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/balldontlieAPI.js"></script>
     <script src="./assets/js/script.js"></script>
     <title>Sportz Project</title>
   </head>
@@ -39,26 +40,17 @@
     </header>
     <main class="container">
 
-        <div class="input-group float-left text-center">
-            <label
-            >Select Menu:
-            <select>
-                <option value="Basketball">Basketball</option>
-                <option value="Football">Football</option>
-                <option value="Soccer">Soccer</option>
-                <option value="Baseball">Baseball</option>
-            </select>
-            </label>
-        </div>
+        <div class="form-errors"></div>
 
         <div class="input-group">
             <input
+            id="search-input"
             class="input-group-field"
-            placeholder="Enter a player or team"
+            placeholder="Enter a player ID or team ID"
             type="search"
             />
             <div class="input-group-button">
-            <input type="submit" class="button" value="Search" />
+            <input type="submit" class="button" id="search-button" value="Search" />
             </div>
         </div>
 
