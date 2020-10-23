@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,47 +16,39 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="assets/js/balldontlieAPI.js"></script>
     <script src="./assets/js/script.js"></script>
     <title>Sportz Project</title>
   </head>
   <body>
-    <header class="Header">
-        <nav class="nav">
-            <ul class="menu">
-                <li class="menu-text">Sportzilla</li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Basketball</a></li>
-                <li><a href="#">Football</a></li>
-                <li><a href="#">Soccer</a></li>
-                <li><a href="#">Baseball</a></li>
-            </ul>
-
-            <div class="title-bar-right">
-                <button class="menu-icon" type="button"></button>
-            </div>
-        </nav>
+    <header class="header">
+      <nav class="nav">
+        <h1 class="menu-text">sportzilla</h1>
+        <h2 class="basketball">all things basketball</h2>
+      </nav>
     </header>
     <main class="container">
-
-        <div class="form-errors"></div>
-
-        <div class="input-group">
-            <input
-            id="search-input"
-            class="input-group-field"
-            placeholder="Enter a player ID or team ID"
-            type="search"
-            />
-            <div class="input-group-button">
-            <input type="submit" class="button" id="search-button" value="Search" />
-            </div>
+      <div class="input-group">
+        <input
+          class="input-group-field"
+          placeholder="Enter a player or team"
+          type="search"
+        />
+        <div class="input-group-button">
+          <input type="submit" class="button" value="Search" />
         </div>
+      </div>
 
-        <hr>
-
-        <h1 class="Statistics text-center">Statistics Report:</h1>
+      <hr />
+      <div class="card">
+        <h1 class="statistics-header text-center">Statistics Report:</h1>
+        <div class="statistics-report">Hello: </div>
+      </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://code.jquery.com/jquery.js"></script>
