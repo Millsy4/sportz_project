@@ -7,14 +7,35 @@
 
 // https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?t=Arsenal  
 
-var playerNames = "Lebron James"
-var queryURLPlayers = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + playerNames;
 
-
-$.ajax({
-    url: queryURLPlayers,
+$('#search-button').on("click", function() {
+    var value = $('#search-input').val();
+    var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + value;
+  $.ajax({
+    url: queryURL,
     method: "GET"
-}).then(function(response) {
+  }).then(function(response) {
     console.log(response);
+    var playerIMG = response.player[0].strCutout;
+    console.log(playerIMG);
+    var playerTwitter = response.player[0].strTwitter;
+    console.log(playerTwitter);
+    var playerFacebook = response.player[0].strFacebook;
+    console.log(playerFacebook);
+    var playerInstagram = response.player[0].strInstagram;
+    console.log(playerInstagram);
+    var createPlayerIMG = $('<img>');
+    createPlayerIMG.attr('src', playerIMG);
+    var createPlayerTwitter = $('<i>');
+    createPlayerTwitter.attr('class', 'fab fa-facebook-f');
+    // <i class="fab fa-facebook-f"></i>
+    var createPlayerFacebook = $('<i>');
+    createPlayerFacebook.attr('class', 'fab fa-twitter');
+    // <i class="fab fa-twitter"></i>
+    var createPlayerInstagram = $('<i>');
+    createPlayerInstagram.attr('class', 'fab fa-instagram')
+    // <i class="fab fa-instagram"></i>
+    $('.statistics-report').append(createPlayerIMG, createPlayerTwitter, createPlayerInstagram, createPlayerFacebook);
+  })    
 })
 
