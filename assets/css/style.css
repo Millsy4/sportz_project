@@ -176,8 +176,9 @@ body {
 } */
 
 .player-data {
-  width: 25%;
   color: #000;
+  margin-top: 1rem;
+  font-size: 18px;
 }
 
 .player-profile {
