@@ -153,3 +153,11 @@ body {
   font-size: x-large;
   margin-left: 15px;
 }
+
+.form-errors {
+  color: #cc0000;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
