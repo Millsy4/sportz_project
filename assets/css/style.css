@@ -159,3 +159,23 @@ body {
   line-height: 15px;
   margin: 5px 0 0;
 }
+
+.player-name {
+  color: #222222;
+  font-size: 48px;
+}
+
+.statistics-stats {
+  background-color: rgb(226, 226, 226);
+  color: #222222;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  align-content: center;
+  font-size: large;
+}
+
+.player-data {
+  width: 25%;
+  color: #000;
+}
