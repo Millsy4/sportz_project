@@ -4,4 +4,17 @@
 
 // As an example your new URL will be:
 
-// https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?t=Arsenal
+
+// https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?t=Arsenal  
+
+var playerNames = "Lebron James"
+var queryURLPlayers = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + playerNames;
+
+
+$.ajax({
+    url: queryURLPlayers,
+    method: "GET"
+}).then(function(response) {
+    console.log(response);
+})
+
