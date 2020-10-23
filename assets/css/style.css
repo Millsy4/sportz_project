@@ -165,7 +165,7 @@ body {
   font-size: 48px;
 }
 
-.statistics-stats {
+/* .statistics-stats {
   background-color: rgb(226, 226, 226);
   color: #222222;
   font-family: 'Josefin Sans', sans-serif;
@@ -173,9 +173,13 @@ body {
   padding: 5px;
   align-content: center;
   font-size: large;
-}
+} */
 
 .player-data {
   width: 25%;
   color: #000;
+}
+
+.player-profile {
+  align-content: right;
 }
