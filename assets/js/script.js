@@ -26,6 +26,8 @@ $('#search-button').on("click", function() {
     console.log(playerInstagram);
     var createPlayerIMG = $('<img>');
     createPlayerIMG.attr('src', playerIMG);
+    // createPlayerIMG.attr('id', 'playerImage');
+    createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px;')
     var createPlayerTwitter = $('<i>');
     createPlayerTwitter.attr('class', 'fab fa-facebook-f');
     // <i class="fab fa-facebook-f"></i>
@@ -35,7 +37,8 @@ $('#search-button').on("click", function() {
     var createPlayerInstagram = $('<i>');
     createPlayerInstagram.attr('class', 'fab fa-instagram')
     // <i class="fab fa-instagram"></i>
-    $('.statistics-report').append(createPlayerIMG, createPlayerTwitter, createPlayerInstagram, createPlayerFacebook);
+    $('.player-profile').append(createPlayerIMG);
+    $('.player-socialMedias').append(createPlayerTwitter, createPlayerInstagram, createPlayerFacebook)
   })    
 })
 
