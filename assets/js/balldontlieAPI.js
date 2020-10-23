@@ -23,7 +23,7 @@ function getPlayerByName() {
 
       console.log(response);
 
-      var playerAverageContent = `<h1 class="player-averages-text text-center">Season Averages</h1>
+      var playerAverageContent = `<h1 class="player-averages-text text-center">19'-20' Season Averages</h1>
       <before::>
       <table class="player-averages">
         <tr>
@@ -76,7 +76,7 @@ function getPlayerByName() {
       );
       $(".player-data").append(playerHeight);
 
-      var playerWeight = $("<p>").html("Weight: " + getPlayerWeight);
+      var playerWeight = $("<p>").html("Weight: " + getPlayerWeight + "lbs");
       $(".player-data").append(playerWeight);
 
       var seasons = 2019;
