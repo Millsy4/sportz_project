@@ -1,0 +1,186 @@
+.input-group {
+  display: flex;
+  justify-content: center;
+  float: right;
+}
+
+.statistics-header {
+    background-color: #2172a8;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    padding-top: 5px;
+    font-weight: 600;
+    align-content: center;
+    font-size: xx-large;
+}
+
+.statistics-report {
+  background-color: rgb(226, 226, 226);
+  color: #222222;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  align-content: center;
+  font-size: large;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+.header {
+  padding: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
+  margin-bottom: 2rem;
+  background-image: url("/assets/images/header-basketball.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 180px;
+  border-radius: 0.3rem;
+  border-bottom: 7px solid #2172a8;
+}
+
+@media (min-width: 576px) {
+  .Header {
+  padding: 4rem 2rem;
+  }
+}
+
+.nav {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: left;
+}
+.nav
+.container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+button,
+input {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  overflow: visible;
+}
+
+.menu-text {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  color: #2172a8;
+  font-size: 50px;
+  justify-content: center;
+}
+
+body {
+  background-color: #222222;
+}
+
+.basketball {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic; 
+  color: rgb(197, 197, 197);
+  font-size: x-large;
+  margin-left: 15px;
+}
+
+.form-errors {
+  color: #cc0000;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 15px;
+  margin: 5px 0 0;
+}
+
+.player-name {
+  color: #222222;
+  font-size: 48px;
+}
+
+/* .statistics-stats {
+  background-color: rgb(226, 226, 226);
+  color: #222222;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  padding: 5px;
+  align-content: center;
+  font-size: large;
+} */
+
+.player-data {
+  color: #000;
+  margin-top: 1rem;
+  font-size: 18px;
+}
+
+.player-profile {
+  align-content: right;
+}
