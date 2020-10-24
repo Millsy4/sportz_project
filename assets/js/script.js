@@ -9,8 +9,10 @@
 
 
 $('#search-button').on("click", function() {
-    var value = $('#search-input').val();
-    var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + value;
+  var value = $('#search-input').val();
+  var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + value;
+  $('.player-profile').empty();
+  $('.player-socialMedias').empty();
   $.ajax({
     url: queryURL,
     method: "GET"

@@ -25,19 +25,21 @@ function getPlayerByName() {
 
       var playerAverageContent = `<h1 class="player-averages-text text-center">19'-20' Season Averages</h1>
       <before::>
-      <table class="player-averages">
-        <tr>
-          <th class="player-assists">AST</th>
-          <th class="player-blocks">BLK</th>
-          <th class="player-defensive-rebounds">DREB</th>
-          <th class="player-offensive-rebounds">OREB</th>
-          <th class="player-free-throw-percentage">FTPCT</th>
-          <th class="player-rebounds">REB</th>
-          <th class="player-turnovers">TO</th>
-          <th class="player-points">PTS</th>
-          <th class="player-free-throw-attempts">FTA</th>
-        </tr>
-      </table>`;
+      <div class='table-scroll'>
+        <table class="player-averages">
+          <tr>
+            <th class="player-assists">AST</th>
+            <th class="player-blocks">BLK</th>
+            <th class="player-defensive-rebounds">DREB</th>
+            <th class="player-offensive-rebounds">OREB</th>
+            <th class="player-free-throw-percentage">FTPCT</th>
+            <th class="player-rebounds">REB</th>
+            <th class="player-turnovers">TO</th>
+            <th class="player-points">PTS</th>
+            <th class="player-free-throw-attempts">FTA</th>
+          </tr>
+        </table>
+      </div>`;
 
       document.getElementById(
         "player-averages"
