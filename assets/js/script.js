@@ -51,6 +51,8 @@ $('#search-button').on("click", function() {
     var createPlayerIMG = $('<img>');
     createPlayerIMG.attr('src', playerIMG);
     // createPlayerIMG.attr('id', 'playerImage');
+
+    createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px; margin-top: 5px')
     if (playerName !== "") {
       var createPlayerName = $('<p>');
       createPlayerName.text("Name: " + playerName);

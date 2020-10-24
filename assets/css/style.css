@@ -184,3 +184,18 @@ body {
 .player-profile {
   align-content: right;
 }
+
+.fa-facebook-f {
+  margin-top: 10px;
+  margin: 5px;
+}
+
+.fa-instagram {
+  margin-top: 10px;
+  margin: 5px;
+}
+
+.fa-twitter {
+  margin-top: 10px;
+  margin: 5px;
+}
