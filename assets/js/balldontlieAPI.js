@@ -4,6 +4,7 @@ function getPlayerByName() {
 
     var queryURL = "https://www.balldontlie.io/api/v1/players/?search=" + value;
 
+    
     $.ajax({
       url: queryURL,
       method: "GET",
