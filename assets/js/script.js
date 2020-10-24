@@ -88,7 +88,7 @@ $('#search-button').on("click", function() {
       createPlayerDescription.text(playerDescription);
     }
 
-    createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px;')
+    createPlayerIMG.attr('style', 'max-width: 250px; max-height: 250px;')
     if (playerTwitter !== "") {
     var createPlayerTwitter = $('<a>');
       createPlayerTwitter.attr('class', 'fab fa-twitter');

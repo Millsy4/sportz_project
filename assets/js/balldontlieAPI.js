@@ -68,7 +68,7 @@ function getPlayerByName() {
         if (response.data.length === 0) {
           $(".player-averages").html("NO CONTENT AVAILABLE!").addClass("text-center");
         } else {
-          var playerAverageContent = `<h1 class="player-averages-text text-center">19'-20' Season Averages</h1>
+          var playerAverageContent = `<h1 class="player-averages-text">19'-20' Season Averages</h1>
         <before::>
         <div class='table-scroll'>
           <table class="player-averages">
