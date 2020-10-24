@@ -9,8 +9,8 @@ The server-side APIs used in this project include:
 * [TheSportsDB](https://www.thesportsdb.com/api.php)
 
 ## Deployed Website
+https://millsy4.github.io/sportz_project/
 
-
-## Screenshots
-
+## Screenshot
+![sportzilla](./assets/images/sportzilla.png)
 
