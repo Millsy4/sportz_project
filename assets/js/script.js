@@ -1,16 +1,14 @@
-// For this API you will use the V1 URL as show in the examples here. Just replace the "1" test key with your new private key. Please also check out the beta v2 of the API on the forums.
-
-// https://www.thesportsdb.com/api.php 
-
-// As an example your new URL will be:
-
-
-// https://www.thesportsdb.com/api/v1/json/4013017/searchplayers.php?t=Arsenal  
+$(document).ready(function() {
+var storeLastPlayer = "";
 
 
 $('#search-button').on("click", function() {
   var value = $('#search-input').val();
-  var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + value;
+  renderPlayer(value);
+});
+
+function renderPlayer(searchPlayer) {
+  var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + searchPlayer;
   $('.player-profile').empty();
   $('.player-socialMedias').empty();
   $('#player-description').empty();
@@ -24,6 +22,7 @@ $('#search-button').on("click", function() {
         alert('Must be a basketball player!');
         return;
     }
+    storeLastPlayer = localStorage.setItem('value', searchPlayer);
     console.log(playerSport);
     console.log(response);
     var playerName = response.player[0].strPlayer;
@@ -116,6 +115,14 @@ $('#search-button').on("click", function() {
     $('.player-profile').append(createPlayerIMG);
     $('.player-socialMedias').append(createPlayerTwitter, createPlayerInstagram, createPlayerFacebook);
     $('#player-description').append(createPlayerDescription);
-  })    
-})
+});
+}
 
+function renderLastPlayer() {
+  value = localStorage.getItem('value');
+  renderPlayer(value);
+}
+
+renderLastPlayer();
+
+});
