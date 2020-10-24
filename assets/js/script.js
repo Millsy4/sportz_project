@@ -19,7 +19,6 @@ function renderPlayer(searchPlayer) {
   }).then(function(response) {
     var playerSport = response.player[0].strSport;
     if (playerSport !== 'Basketball') {
-        alert('Must be a basketball player!');
         return;
     }
     storeLastPlayer = localStorage.setItem('value', searchPlayer);
@@ -57,7 +56,7 @@ function renderPlayer(searchPlayer) {
       createPlayerName.text("Name: " + playerName);
     }
 
-    if (playerTeam !== "") {
+    if (playerTeam !== ""  && playerTeam !== "_Retired Basketball") {
       var createPlayerTeam = $('<p>');
       createPlayerTeam.text("Team: " + playerTeam);
     }
@@ -70,6 +69,11 @@ function renderPlayer(searchPlayer) {
     if (playerHeight !== "") {
       var createPlayerHeight = $('<p>');
       createPlayerHeight.text("Height: " + playerHeight);
+    }
+
+    if (playerTeam === "_Retired Basketball") {
+      var createPlayerTeam = $('<p>');
+      createPlayerTeam.text('Team: Retired');
     }
     
     if (playerWeight !== "") {
