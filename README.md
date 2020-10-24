@@ -3,7 +3,7 @@
 
 ## Overview
 ### Welcome to our project! Our team has created a responsive website that provides statistics from the 2019-2020 NBA season for each user-searched player. This was achieved by integrating data received from multiple server-side API requests.
-#
+
 
 ## Technologies Used Include: 
 * ### Foundation CSS
