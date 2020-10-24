@@ -13,22 +13,65 @@ $('#search-button').on("click", function() {
   var queryURL = "https://www.thesportsdb.com/api/v1/json/1/searchplayers.php?p=" + value;
   $('.player-profile').empty();
   $('.player-socialMedias').empty();
+  $('.player-data').empty();
   $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
+    var playerSport = response.player[0].strSport;
+    if (playerSport !== 'Basketball') {
+        alert('Must be a basketball player!');
+        return;
+    }
+    console.log(playerSport);
     console.log(response);
     var playerIMG = response.player[0].strCutout;
-    console.log(playerIMG);
+    // console.log(playerIMG);
     var playerTwitter = response.player[0].strTwitter;
-    console.log(playerTwitter);
+    // console.log(playerTwitter);
     var playerFacebook = response.player[0].strFacebook;
-    console.log(playerFacebook);
+    // console.log(playerFacebook);
     var playerInstagram = response.player[0].strInstagram;
-    console.log(playerInstagram);
+    // console.log(playerInstagram);
+    var playerTeam = response.player[0].strTeam;
+    console.log(playerTeam);
+    var playerPosition = response.player[0].strPosition;
+    console.log(playerPosition);
+    var playerHeight = response.player[0].strHeight;
+    console.log(playerHeight);
+    var playerWeight = response.player[0].strWeight;
+    console.log(playerWeight);
+    var playerNumber = response.player[0].strNumber;
+    console.log(playerNumber);
+
     var createPlayerIMG = $('<img>');
     createPlayerIMG.attr('src', playerIMG);
     // createPlayerIMG.attr('id', 'playerImage');
+    if (playerTeam !== "") {
+      var createPlayerTeam = $('<p>');
+      createPlayerTeam.text(playerTeam);
+    }
+
+    if (playerPosition !== "") {
+      var createPlayerPosition = $('<p>');
+      createPlayerPosition.text(playerPosition);
+    }
+
+    if (playerHeight !== "") {
+      var createPlayerHeight = $('<p>');
+      createPlayerHeight.text(playerHeight);
+    }
+    
+    if (playerWeight !== "") {
+      var createPlayerWeight = $('<p>');
+      createPlayerWeight.text(playerWeight);
+    }
+
+    if (playerNumber !== "") {
+      var createPlayerNumber = $('<p>');
+      createPlayerNumber.text(playerNumber);
+    }
+
     createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px;')
     if (playerTwitter !== "") {
     var createPlayerTwitter = $('<a>');
@@ -55,6 +98,7 @@ $('#search-button').on("click", function() {
       createPlayerInstagram.attr('target', '_blank');
     }
     // <i class="fab fa-instagram"></i>
+    $('.player-data').append(createPlayerTeam, createPlayerPosition, createPlayerHeight, createPlayerWeight, createPlayerNumber);
     $('.player-profile').append(createPlayerIMG);
     $('.player-socialMedias').append(createPlayerTwitter, createPlayerInstagram, createPlayerFacebook)
   })    
