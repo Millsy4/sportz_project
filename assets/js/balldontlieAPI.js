@@ -17,9 +17,9 @@ function getPlayerByName() {
 
       var getPlayerID = response.data[0].id;
 
-      // var getFirstname = response.data[0].first_name;
+      var getFirstname = response.data[0].first_name;
 
-      // var getLastname = response.data[0].last_name;
+      var getLastname = response.data[0].last_name;
 
       // var getHeightFeet = response.data[0].height_feet;
 
@@ -29,10 +29,10 @@ function getPlayerByName() {
 
       // var getPlayerWeight = response.data[0].weight_pounds;
 
-      // var playername = $('<div class="player-name text-center">').html(
-      //   getFirstname + " " + getLastname
-      // );
-      // $(".statistics-report").append(playername);
+      var playername = $('<div class="player-name text-center">').html(
+        getFirstname + " " + getLastname
+      );
+      $(".statistics-report").append(playername);
 
       // var playerTeam = $("<p>").html("Team: " + getPlayerTeam);
       // $(".player-data").append(playerTeam);
