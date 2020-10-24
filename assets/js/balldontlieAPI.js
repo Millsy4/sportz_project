@@ -4,82 +4,50 @@ function getPlayerByName() {
 
     var queryURL = "https://www.balldontlie.io/api/v1/players/?search=" + value;
 
-    $(".form-errors")
-      .text("Please enter a name of the player or team you want to search for!")
-      .hide();
-
     $.ajax({
       url: queryURL,
       method: "GET",
-      error: (err) => {
-        $(".form-errors")
-          .text("Please enter a name of the player you want to search for!")
-          .show();
-        return;
-      },
     }).then(function (response) {
       $(".statistics-report").empty();
       $(".player-data").empty();
 
       console.log(response);
 
-      var playerAverageContent = `<h1 class="player-averages-text text-center">19'-20' Season Averages</h1>
-      <before::>
-      <div class='table-scroll'>
-        <table class="player-averages">
-          <tr>
-            <th class="player-assists">AST</th>
-            <th class="player-blocks">BLK</th>
-            <th class="player-defensive-rebounds">DREB</th>
-            <th class="player-offensive-rebounds">OREB</th>
-            <th class="player-free-throw-percentage">FTPCT</th>
-            <th class="player-rebounds">REB</th>
-            <th class="player-turnovers">TO</th>
-            <th class="player-points">PTS</th>
-            <th class="player-free-throw-attempts">FTA</th>
-          </tr>
-        </table>
-      </div>`;
-
-      document.getElementById(
-        "player-averages"
-      ).innerHTML = playerAverageContent;
-
-      var getPlayerTeam = response.data[0].team.full_name;
+      // var getPlayerTeam = response.data[0].team.full_name;
 
       var getPlayerID = response.data[0].id;
 
-      var getFirstname = response.data[0].first_name;
+      // var getFirstname = response.data[0].first_name;
 
-      var getLastname = response.data[0].last_name;
+      // var getLastname = response.data[0].last_name;
 
-      var getHeightFeet = response.data[0].height_feet;
+      // var getHeightFeet = response.data[0].height_feet;
 
-      var getHeightInches = response.data[0].height_inches;
+      // var getHeightInches = response.data[0].height_inches;
 
-      var getPlayerPosition = response.data[0].position;
+      // var getPlayerPosition = response.data[0].position;
 
-      var getPlayerWeight = response.data[0].weight_pounds;
+      // var getPlayerWeight = response.data[0].weight_pounds;
 
-      var playername = $('<div class="player-name text-center">').html(
-        getFirstname + " " + getLastname
-      );
-      $(".statistics-report").append(playername);
+      // var playername = $('<div class="player-name text-center">').html(
+      //   getFirstname + " " + getLastname
+      // );
+      // $(".statistics-report").append(playername);
 
-      var playerTeam = $("<p>").html("Team: " + getPlayerTeam);
-      $(".player-data").append(playerTeam);
+      // var playerTeam = $("<p>").html("Team: " + getPlayerTeam);
+      // $(".player-data").append(playerTeam);
 
-      var playerPosition = $("<p>").html("Position: " + getPlayerPosition);
-      $(".player-data").append(playerPosition);
+      // var playerPosition = $("<p>").html("Position: " + getPlayerPosition);
+      // $(".player-data").append(playerPosition);
 
-      // Gets the players Height and shows on the statistics report
-      var playerHeight = $("<p>").html(
-        "Height: " + getHeightFeet + "'" + getHeightInches + '"'
-      );
-      $(".player-data").append(playerHeight);
+      // // Gets the players Height and shows on the statistics report
+      // var playerHeight = $("<p>").html(
+      //   "Height: " + getHeightFeet + "'" + getHeightInches + '"'
+      // );
+      // $(".player-data").append(playerHeight);
 
-      var playerWeight = $("<p>").html("Weight: " + getPlayerWeight + "lbs");
-      $(".player-data").append(playerWeight);
+      // var playerWeight = $("<p>").html("Weight: " + getPlayerWeight + "lbs");
+      // $(".player-data").append(playerWeight);
 
       var seasons = 2019;
 
@@ -90,81 +58,120 @@ function getPlayerByName() {
         "&player_ids[]=" +
         getPlayerID;
 
-      $(".form-errors")
-        .text("Please enter a name of the player you want to search for!")
-        .hide();
+      $(".player-averages").empty();
 
       $.ajax({
         url: queryURL,
         method: "GET",
-        error: (err) => {
-          $(".form-errors")
-            .text("Please enter a name of the player you want to search for!")
-            .show();
-          return;
-        },
       }).then(function (response) {
         console.log(response);
+        if (response.data.length === 0) {
+          $(".player-averages").html("NO CONTENT AVAILABLE!").addClass("text-center");
+        } else {
+          var playerAverageContent = `<h1 class="player-averages-text text-center">19'-20' Season Averages</h1>
+        <before::>
+        <div class='table-scroll'>
+          <table class="player-averages">
+            <tr>
+              <th class="player-assists">AST</th>
+              <th class="player-blocks">BLK</th>
+              <th class="player-defensive-rebounds">DREB</th>
+              <th class="player-offensive-rebounds">OREB</th>
+              <th class="player-free-throw-percentage">FTPCT</th>
+              <th class="player-rebounds">REB</th>
+              <th class="player-turnovers">TO</th>
+              <th class="player-points">PTS</th>
+              <th class="player-free-throw-attempts">FTA</th>
+            </tr>
+          </table>
+        </div>`;
 
-        var getPlayerAssists = response.data[0].ast;
+          document.getElementById(
+            "player-averages"
+          ).innerHTML = playerAverageContent;
 
-        var playerAssists = $('<td class="text-center">').html(
-          getPlayerAssists
-        );
+          var getPlayerAssists = response.data[0].ast;
 
-        var getPlayerBlocks = response.data[0].blk;
+          if (getPlayerAssists !== null) {
+            var playerAssists = $('<td class="text-center">').html(
+              getPlayerAssists
+            );
+          }
 
-        var playerBlocks = $("<td class='text-center'>").html(getPlayerBlocks);
+          var getPlayerBlocks = response.data[0].blk;
 
-        var getPlayerDefensiveRebounds = response.data[0].dreb;
+          if (getPlayerBlocks !== null) {
+            var playerBlocks = $("<td class='text-center'>").html(
+              getPlayerBlocks
+            );
+          }
 
-        var playerDefRebounds = $("<td class='text-center'>").html(
-          getPlayerDefensiveRebounds
-        );
+          var getPlayerDefensiveRebounds = response.data[0].dreb;
 
-        var getPlayerOffensiveRebounds = response.data[0].oreb;
+          if (getPlayerDefensiveRebounds !== null) {
+            var playerDefRebounds = $("<td class='text-center'>").html(
+              getPlayerDefensiveRebounds
+            );
+          }
 
-        var playerOffRebounds = $("<td class='text-center'>").html(
-          getPlayerOffensiveRebounds
-        );
+          var getPlayerOffensiveRebounds = response.data[0].oreb;
 
-        var getPlayerFreeThrowPct = response.data[0].ft_pct;
+          if (getPlayerOffensiveRebounds !== null) {
+            var playerOffRebounds = $("<td class='text-center'>").html(
+              getPlayerOffensiveRebounds
+            );
+          }
 
-        var playerFreeThrowPct = $("<td class='text-center'>").html(
-          getPlayerFreeThrowPct
-        );
+          var getPlayerFreeThrowPct = response.data[0].ft_pct;
 
-        var getPlayerRebounds = response.data[0].reb;
+          if (getPlayerFreeThrowPct !== null) {
+            var playerFreeThrowPct = $("<td class='text-center'>").html(
+              getPlayerFreeThrowPct
+            );
+          }
 
-        var playerRebounds = $("<td class='text-center'>").html(
-          getPlayerRebounds
-        );
+          var getPlayerRebounds = response.data[0].reb;
 
-        var getPlayerTurnovers = response.data[0].turnover;
+          if (getPlayerRebounds !== null) {
+            var playerRebounds = $("<td class='text-center'>").html(
+              getPlayerRebounds
+            );
+          }
 
-        var playerTurnovers = $("<td class='text-center'>").html(
-          getPlayerTurnovers
-        );
+          var getPlayerTurnovers = response.data[0].turnover;
 
-        var getPlayerPoints = response.data[0].pts;
+          if (getPlayerTurnovers !== null) {
+            var playerTurnovers = $("<td class='text-center'>").html(
+              getPlayerTurnovers
+            );
+          }
 
-        var playerPoints = $("<td class='text-center'>").html(getPlayerPoints);
+          var getPlayerPoints = response.data[0].pts;
 
-        var getPlayerFta = response.data[0].fta;
+          if (getPlayerPoints !== null) {
+            var playerPoints = $("<td class='text-center'>").html(
+              getPlayerPoints
+            );
+          }
 
-        var playerFTA = $("<td class='text-center'>").html(getPlayerFta);
+          var getPlayerFta = response.data[0].fta;
 
-        $("table").append(
-          playerAssists,
-          playerBlocks,
-          playerDefRebounds,
-          playerOffRebounds,
-          playerFreeThrowPct,
-          playerRebounds,
-          playerTurnovers,
-          playerPoints,
-          playerFTA
-        );
+          if (getPlayerFta !== null) {
+            var playerFTA = $("<td class='text-center'>").html(getPlayerFta);
+          }
+
+          $("table").append(
+            playerAssists,
+            playerBlocks,
+            playerDefRebounds,
+            playerOffRebounds,
+            playerFreeThrowPct,
+            playerRebounds,
+            playerTurnovers,
+            playerPoints,
+            playerFTA
+          );
+        }
       });
     });
   });
