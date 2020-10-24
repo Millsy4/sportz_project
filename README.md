@@ -11,6 +11,6 @@ The server-side APIs used in this project include:
 ## Deployed Website
 https://millsy4.github.io/sportz_project/
 
-## Screenshot
+## Screenshots
 ![sportzilla](./assets/images/sportzilla.png)
 
