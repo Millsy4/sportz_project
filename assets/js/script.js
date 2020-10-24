@@ -30,23 +30,30 @@ $('#search-button').on("click", function() {
     createPlayerIMG.attr('src', playerIMG);
     // createPlayerIMG.attr('id', 'playerImage');
     createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px;')
+    if (playerTwitter !== "") {
     var createPlayerTwitter = $('<a>');
-    createPlayerTwitter.attr('class', 'fab fa-twitter');
-    createPlayerTwitter.attr('href', 'https://' + playerTwitter);
-    createPlayerTwitter.attr('role', 'button');
-    createPlayerTwitter.attr('target', '_blank');
+      createPlayerTwitter.attr('class', 'fab fa-twitter');
+      createPlayerTwitter.attr('href', 'https://' + playerTwitter);
+      createPlayerTwitter.attr('role', 'button');
+      createPlayerTwitter.attr('target', '_blank');
+    }
     // <i class="fab fa-facebook-f"></i>
+    
+    if (playerFacebook !== "") {
     var createPlayerFacebook = $('<a>');
-    createPlayerFacebook.attr('class', 'fab fa-facebook-f');
-    createPlayerFacebook.attr('href', 'https://' + playerFacebook);
-    createPlayerFacebook.attr('role', 'button');
-    createPlayerFacebook.attr('target', '_blank');
+      createPlayerFacebook.attr('class', 'fab fa-facebook-f');
+      createPlayerFacebook.attr('href', 'https://' + playerFacebook);
+      createPlayerFacebook.attr('role', 'button');
+      createPlayerFacebook.attr('target', '_blank');
+    }
     // <i class="fab fa-twitter"></i>
+    if (playerInstagram !== "") {
     var createPlayerInstagram = $('<a>');
-    createPlayerInstagram.attr('class', 'fab fa-instagram')
-    createPlayerInstagram.attr('href', 'https://' + playerInstagram);
-    createPlayerInstagram.attr('role', 'button');
-    createPlayerInstagram.attr('target', '_blank');
+      createPlayerInstagram.attr('class', 'fab fa-instagram')
+      createPlayerInstagram.attr('href', 'https://' + playerInstagram);
+      createPlayerInstagram.attr('role', 'button');
+      createPlayerInstagram.attr('target', '_blank');
+    }
     // <i class="fab fa-instagram"></i>
     $('.player-profile').append(createPlayerIMG);
     $('.player-socialMedias').append(createPlayerTwitter, createPlayerInstagram, createPlayerFacebook)
