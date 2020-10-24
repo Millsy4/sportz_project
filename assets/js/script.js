@@ -50,6 +50,8 @@ function renderPlayer(searchPlayer) {
     var createPlayerIMG = $('<img>');
     createPlayerIMG.attr('src', playerIMG);
     // createPlayerIMG.attr('id', 'playerImage');
+
+    createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px; margin-top: 5px')
     if (playerName !== "") {
       var createPlayerName = $('<p>');
       createPlayerName.text("Name: " + playerName);
@@ -85,7 +87,7 @@ function renderPlayer(searchPlayer) {
       createPlayerDescription.text(playerDescription);
     }
 
-    createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px;')
+    createPlayerIMG.attr('style', 'max-width: 250px; max-height: 250px;')
     if (playerTwitter !== "") {
     var createPlayerTwitter = $('<a>');
       createPlayerTwitter.attr('class', 'fab fa-twitter');
