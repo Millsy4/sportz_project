@@ -51,9 +51,13 @@ function renderPlayer(searchPlayer) {
     // createPlayerIMG.attr('id', 'playerImage');
 
     createPlayerIMG.attr('style', 'max-width: 200px; max-height: 200px; margin-top: 5px')
+    // if (playerName !== "") {
+    //   var createPlayerName = $('<p>');
+    //   createPlayerName.text("Name: " + playerName);
+    // }
     if (playerName !== "") {
-      var createPlayerName = $('<p>');
-      createPlayerName.text("Name: " + playerName);
+      var playername = $('<div class="player-name text-center">').html(playerName);
+      $(".statistics-report").append(playername);
     }
 
     if (playerTeam !== ""  && playerTeam !== "_Retired Basketball") {
@@ -117,7 +121,7 @@ function renderPlayer(searchPlayer) {
       createPlayerInstagram.attr('target', '_blank');
     }
     // <i class="fab fa-instagram"></i>
-    $('.player-data').append(createPlayerName, createPlayerTeam, createPlayerPosition, createPlayerHeight, createPlayerWeight, createPlayerNumber);
+    $('.player-data').append(createPlayerTeam, createPlayerPosition, createPlayerHeight, createPlayerWeight, createPlayerNumber);
     $('.player-profile').append(createPlayerIMG);
     $('.player-socialMedias').append(createPlayerTwitter, createPlayerInstagram, createPlayerFacebook);
     $('#player-description').append(createPlayerDescription);
@@ -161,10 +165,7 @@ function getPlayerByName() {
 
       // var getPlayerWeight = response.data[0].weight_pounds;
 
-      var playername = $('<div class="player-name text-center">').html(
-        getFirstname + " " + getLastname
-      );
-      $(".statistics-report").append(playername);
+     
 
       // var playerTeam = $("<p>").html("Team: " + getPlayerTeam);
       // $(".player-data").append(playerTeam);
