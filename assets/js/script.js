@@ -67,6 +67,11 @@ function renderPlayer(searchPlayer) {
       createPlayerTeam.text("Team: " + playerTeam);
     }
 
+    if (playerTeam === "_Deceased Basketball") {
+      var createPlayerTeam = $('<p>');
+      createPlayerTeam.text("Team: Retired");
+    }
+
     if (playerPosition !== "") {
       var createPlayerPosition = $('<p>');
       createPlayerPosition.text("Position: " + playerPosition);
