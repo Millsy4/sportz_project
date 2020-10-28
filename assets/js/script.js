@@ -5,6 +5,7 @@ var storeLastPlayer = "";
 $('#search-button').on("click", function() {
   var value = $('#search-input').val();
   renderPlayer(value);
+  getPlayerByName(value);
 });
 
 function renderPlayer(searchPlayer) {
@@ -13,6 +14,7 @@ function renderPlayer(searchPlayer) {
   $('.player-socialMedias').empty();
   $('#player-description').empty();
   $('.player-data').empty();
+  $(".statistics-report").empty();
   $.ajax({
     url: queryURL,
     method: "GET"
@@ -131,12 +133,11 @@ function renderPlayer(searchPlayer) {
 function renderLastPlayer() {
   value = localStorage.getItem('value');
   renderPlayer(value);
+  getPlayerByName(value);
 }
 
-renderLastPlayer();
-function getPlayerByName() {
-  $("#search-button").on("click", function () {
-    var value = $("#search-input").val();
+
+function getPlayerByName(value) {
 
     var queryURL = "https://www.balldontlie.io/api/v1/players/?search=" + value;
 
@@ -144,7 +145,6 @@ function getPlayerByName() {
       url: queryURL,
       method: "GET",
     }).then(function (response) {
-      $(".statistics-report").empty();
       // $(".player-data").empty();
 
       console.log(response);
@@ -307,10 +307,9 @@ function getPlayerByName() {
         }
       });
     });
-  });
+
 }
 
+renderLastPlayer();
 getPlayerByName();
-
-
 });
