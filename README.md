@@ -8,9 +8,17 @@ The server-side APIs used in this project include:
 * [balldontlie](https://www.balldontlie.io/#introduction)
 * [TheSportsDB](https://www.thesportsdb.com/api.php)
 
-## Deployed Website
+## User Story
 
+```
+AS A fan of the NBA
+I WANT an efficient way to view player statistics
+SO THAT I will be well-informed for any sports-related endeavors
+```
+
+## Deployed Website
+https://millsy4.github.io/sportz_project/
 
 ## Screenshots
-
+![sportzilla](./assets/images/sportzilla.png)
 

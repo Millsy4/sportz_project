@@ -8,8 +8,9 @@
     background-color: #2172a8;
     color: white;
     font-family: 'Josefin Sans', sans-serif;
-    padding-top: 5px;
-    font-weight: 600;
+    padding: 7px;
+    padding-top: 13px;
+    font-weight: 700;
     align-content: center;
     font-size: xx-large;
 }
@@ -178,9 +179,43 @@ body {
 .player-data {
   color: #000;
   margin-top: 1rem;
+  margin-left: 1rem;
   font-size: 18px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
 }
 
 .player-profile {
-  align-content: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  align-content: baseline;
+  justify-content: baseline;
+}
+
+.fa-facebook-f {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.fa-instagram {
+  margin: 5px;
+}
+
+.fa-twitter {
+  margin-right: 1rem;
+}
+
+.description-paragraph {
+  margin: 2em;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 400;
+  color: rgb(94, 94, 94);
+}
+
+.player-averages-text {
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: xx-large;
+  color: #2172a8;
 }
