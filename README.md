@@ -1,7 +1,7 @@
 # Sportzilla: NBA Player Statistics 
 
 
-## Overview
+### Overview
 Welcome to our project! Our team has created a responsive website that provides statistics from the 2019-2020 NBA season for each user-searched player. This was achieved by integrating data received from multiple server-side API requests. 
 
 # Technologies used Include
@@ -39,7 +39,7 @@ https://github.com/Millsy4/sportz_project.git
 
 
 # Screenshots
-![sportzilla](./assets/images/sportzilla.png)
+![sportzilla](./assets/images/sportzilla-demo.gif)
 
 
 
