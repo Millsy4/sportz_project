@@ -23,12 +23,23 @@ Welcome to our project! Our team has created a responsive website that provides 
 * [balldontlie](https://www.balldontlie.io/#introduction)
 * [TheSportsDB](https://www.thesportsdb.com/api.php)
 
+# User Story
+
+```
+AS A fan of the NBA
+I WANT an efficient way to view player statistics
+SO THAT I will be well-informed for any sports-related endeavors
+```
+
 # Deployed Website
+
 https://millsy4.github.io/sportz_project/
-# Repository
+## Repository
 https://github.com/Millsy4/sportz_project.git
 
 
 # Screenshots
 ![sportzilla](./assets/images/sportzilla.png)
+
+
 
